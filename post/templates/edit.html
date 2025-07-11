@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Item</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <form action="" method="POST" >
+        {% csrf_token %}
+        <div class="form-group border p-4 rounded ">
+            <h4 class="color-info">Edit Item Here</h4><br>
+            <input type="text" name="sample_item" placeholder="Sample Item" class="border p-2 rounded" value="{{ person.sample_item }}"><br><br>
+            <input type="text" name="category" placeholder="Category" class="border p-2 rounded" value="{{ person.category }}"><br><br>
+            <input type="date" name="date" placeholder="Date" class="border p-2 rounded" value="{{ person.date }}"><br><br>
+            <input type="submit" name="submit" value="Submit" class="btn btn-outline-success">
+        </div>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -56,16 +56,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                        {% for person in people %}
                             <tr>
-                                <td>1</td>
-                                <td>Sample Item</td>
-                                <td>Category A</td>
-                                <td>2025-07-08</td>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ person.sample_item }}</td>
+                                <td>{{ person.category }}</td>
+                                <td>{{ person.date }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                </td>
+                                    <a href="{% url 'edit' person.id %}" class="btn btn-sm btn-primary">Edit</a>
+                                    <a href="{% url 'delete' person.id %}" class="btn btn-dark bg-danger" type="button" onclick="return confirm('Are you sure you want to delete the person?')">DELETE</a></td>td>
                             </tr>
+                        {% endfor %}
                             <!-- Repeat rows dynamically -->
                         </tbody>
                     </table>

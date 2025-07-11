@@ -19,3 +19,18 @@
         .content {
             padding: 2rem;
         }
+
+        form{
+            border: solid;
+            border-radius: 2px;
+            margin-top: 30px;
+
+
+        input[type="submit"]{
+       width: 100%;
+       background-color: f;
+       color: white;
+   }
+        input[type="submit"]:hover{
+       background-color: black;
+   }
