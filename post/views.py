@@ -33,7 +33,7 @@ def delete(request, id):
     except Exception as e:
         messages.error(request, "person not deleted")
 
-    return redirect('dashboard')
+    return redirect('index')
 def edit(request,id):
     person = get_object_or_404(ItemList, id=id)
 
