@@ -16,7 +16,7 @@
             <h4 class="color-info">Edit Item Here</h4><br>
             <input type="text" name="sample_item" placeholder="Sample Item" class="border p-2 rounded" value="{{ person.sample_item }}"><br><br>
             <input type="text" name="category" placeholder="Category" class="border p-2 rounded" value="{{ person.category }}"><br><br>
-            <input type="date" name="date" placeholder="Date" class="border p-2 rounded" value="{{ person.date }}"><br><br>
+            <input type="date" name="date" placeholder="Date" class="border p-2 rounded" value="{{ person.date|date:'Y-m-d' }}"><br><br>
             <input type="submit" name="submit" value="Submit" class="btn btn-outline-success">
         </div>
     </form>
