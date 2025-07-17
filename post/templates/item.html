@@ -12,11 +12,15 @@
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <form action="" method="POST" >
         {% csrf_token %}
-        <div class="form-group border-solid p-4 rounded ">
+        <div class="form-group p-4 rounded" style="
+                background-color: #23bf0b;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 8px 4px 20px black ">
             <h4>Add New Item</h4><br>
             <input type="text" name="sample_item" placeholder="Sample Item" class="border p-2 rounded" ><br><br>
             <input type="text" name="category" placeholder="Category" class="border p-2 rounded"><br><br>
-            <input type="text" name="date" placeholder="Date" class="border p-2 rounded"><br><br>
+            <input type="date" name="date" placeholder="Date" class="border p-2 rounded"><br><br>
             <input type="submit" name="submit" value="Submit" class="btn btn-outline-dark" >
         </div>
     </form>
